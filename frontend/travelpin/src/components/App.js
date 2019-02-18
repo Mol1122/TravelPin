@@ -4,6 +4,7 @@ import { Main } from "./Main.js";
 import { BrowserRouter } from 'react-router-dom';
 import { TopBar } from "./TopBar";
 import { TOKEN_KEY } from "../constants";
+import { Footer } from "./Footer";
 
 class App extends Component {
     state = {
@@ -26,6 +27,7 @@ class App extends Component {
                 <div className="App">
                     <TopBar handleLogout={this.handleLogout} isLoggedIn={this.state.isLoggedIn}/>
                     <Main handleSuccessfulLogin={this.handleSuccessfulLogin} isLoggedIn={this.state.isLoggedIn}/>
+                    <Footer />
                 </div>
             </BrowserRouter>
         );
